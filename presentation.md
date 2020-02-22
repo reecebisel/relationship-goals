@@ -107,3 +107,20 @@ class Pokemon < ApplicationRecord
   has_many :trainers, through: :teams
 end
 ```
+
+---
+![bg right](https://www.fillmurray.com/g/155/300)
+
+# has_many_and_belongs_to
+
+Requires a join table called assemblies_parts
+
+```ruby
+class Assembly < ApplicationRecord
+  has_and_belongs_to_many :parts
+end
+
+class Parts < ApplicationRecord
+  has_and_belongs_to_many :assemblies
+end
+```
