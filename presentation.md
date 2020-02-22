@@ -46,3 +46,29 @@ end
 class Books < ApplicationRecord
 end
 ```
+
+---
+# The Many
+# Many to Many
+
+---
+![bg right](https://www.fillmurray.com/g/155/300)
+
+# has_many through
+
+```ruby
+class Trainers < ApplicationRecord
+  has_many :teams
+  has_many :pokemen, through: :teams
+end
+
+class Teams < ApplicationRecord
+  belongs_to :trainer
+  has_many :pokemen
+end
+
+class Pokemon < ApplicationRecord
+  has_many :teams
+  has_many :trainers, through: :teams
+end
+```
