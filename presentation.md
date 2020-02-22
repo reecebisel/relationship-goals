@@ -48,11 +48,46 @@ end
 ```
 
 ---
+![bg right](https://www.fillmurray.com/g/155/300)
+
+# has_one
+
+```ruby
+class Trainer < ApplicationRecord
+  has_one :favorite, class: "Pokemon"
+end
+
+class Pokemon < Application
+  belongs_to :trainer, as: :favorite
+end
+```
+---
+![bg right](https://www.fillmurray.com/g/155/300)
+
+# has_one through
+
+```ruby
+class Supplier < ApplicationRecord
+  has_one :account
+  has_one :account_history, through: :account
+end
+
+class Account < ApplicationRecord
+  belongs_to :supplier
+  has_one :account_history
+end
+
+class AccountHistory < ApplicationRecord
+  belongs_to :account
+end
+```
+
+---
 # The Many
 # Many to Many
 
 ---
-![bg right](https://www.fillmurray.com/g/155/300)
+![bg left](https://www.fillmurray.com/g/155/300)
 
 # has_many through
 
