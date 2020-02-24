@@ -1,12 +1,15 @@
 ---
 marp: true
-theme: default
+theme: totez
 ---
+
 # Relationship Goals
 
 ---
-# 3 Types of 
-# Database relationships
+<!-- _class: invert -->
+# 3 Types of  
+# Database 
+# Relationships
 
 ---
 # Many to Many
