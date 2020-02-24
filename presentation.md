@@ -144,3 +144,34 @@ class Product < ApplicationRecord
   has_many :pictures
 end
 ```
+
+---
+# inverse_of
+
+```ruby
+class Author < ApplicationRecord
+  has_many :books
+end
+
+class Book < ApplicationRecord
+  belongs_to :book
+end
+```
+
+---
+# Bi-Directional Relationships
+
+```ruby
+# Without
+a = Author.first
+b = a.books.first
+a.first_name == b.writer.first_name # => true
+a.first_name = 'David'
+a.first_name == b.writer.first_name # => false
+# With
+a = Author.first
+b = a.books.first
+a.first_name == b.writer.first_name # => true
+a.first_name = 'David'
+a.first_name == b.writer.first_name # => true
+```
