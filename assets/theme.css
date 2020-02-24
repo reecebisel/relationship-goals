@@ -358,7 +358,7 @@ section {
   align-items: center;
   font-family: "Ubuntu Condensed";
   flex-direction: column; }
-  section h1 {
+  section h1, section h2, section h3, section h4, section h5 {
     font-family: "Montserrat Subrayada"; }
 
 /*# sourceMappingURL=theme.css.map */
