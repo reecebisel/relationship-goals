@@ -17,6 +17,7 @@ theme: totez
 # One to One
 
 ---
+<!-- _class: invert -->
 # 6 Types in of Rails
 # Associations
 
@@ -35,6 +36,7 @@ end
 ```
 
 ---
+<!-- _class: invert -->
 # has_many
 Many to one
 
@@ -48,7 +50,6 @@ end
 ```
 
 ---
-
 # has_one
 
 ```ruby
@@ -62,6 +63,7 @@ end
 ```
 
 ---
+<!-- _class: invert -->
 # has_one through
 
 ```ruby
@@ -85,6 +87,7 @@ end
 # Many to Many
 
 ---
+<!-- _class: invert -->
 <style scoped>
   code {
     font-size: 0.5em;
@@ -127,6 +130,7 @@ end
 ```
 
 ---
+<!-- _class: invert -->
 # polymorphic: true
 
 ```ruby
@@ -157,6 +161,7 @@ end
 ```
 
 ---
+<!-- _class: invert -->
 <style scoped>
   code {
     font-size: 0.5em;
