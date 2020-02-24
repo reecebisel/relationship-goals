@@ -18,7 +18,6 @@ theme: default
 # Associations
 
 ---
-![bg right](https://www.fillmurray.com/g/155/300)
 # belongs_to
 
 one to many relationship
@@ -33,8 +32,6 @@ end
 ```
 
 ---
-![bg left](https://www.fillmurray.com/g/155/300)
-
 # has_many
 Many to one
 
@@ -47,23 +44,20 @@ class Books < ApplicationRecord
 end
 ```
 
----
-![bg right](https://www.fillmurray.com/g/155/300)
+--
 
 # has_one
 
 ```ruby
 class Trainer < ApplicationRecord
-  has_one :favorite, class: "Pokemon"
+  has_one :favorite, class_name: "Pokemon"
 end
 
-class Pokemon < Application
+class Pokemon < ApplicationRecord
   belongs_to :trainer, as: :favorite
 end
 ```
----
-![bg left](https://www.fillmurray.com/g/155/300)
-
+--
 # has_one through
 
 ```ruby
@@ -87,8 +81,6 @@ end
 # Many to Many
 
 ---
-![bg left](https://www.fillmurray.com/g/155/300)
-
 # has_many through
 Join table has other attributes from foreign keys
 
@@ -110,8 +102,6 @@ end
 ```
 
 ---
-![bg right](https://www.fillmurray.com/g/155/300)
-
 # has_many_and_belongs_to
 
 Requires only join table w/o extra attributes
@@ -127,8 +117,6 @@ end
 ```
 
 ---
-![bg left](https://www.fillmurray.com/g/155/300)
-
 # polymorphic: true
 
 ```ruby
@@ -175,3 +163,6 @@ a.first_name == b.writer.first_name # => true
 a.first_name = 'David'
 a.first_name == b.writer.first_name # => true
 ```
+
+---
+# END
