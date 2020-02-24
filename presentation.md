@@ -62,7 +62,7 @@ class Pokemon < Application
 end
 ```
 ---
-![bg right](https://www.fillmurray.com/g/155/300)
+![bg left](https://www.fillmurray.com/g/155/300)
 
 # has_one through
 
@@ -90,6 +90,7 @@ end
 ![bg left](https://www.fillmurray.com/g/155/300)
 
 # has_many through
+Join table has other attributes from foreign keys
 
 ```ruby
 class Trainers < ApplicationRecord
@@ -113,7 +114,7 @@ end
 
 # has_many_and_belongs_to
 
-Requires a join table called assemblies_parts
+Requires only join table w/o extra attributes
 
 ```ruby
 class Assembly < ApplicationRecord
@@ -122,5 +123,24 @@ end
 
 class Parts < ApplicationRecord
   has_and_belongs_to_many :assemblies
+end
+```
+
+---
+![bg left](https://www.fillmurray.com/g/155/300)
+
+# polymorphic: true
+
+```ruby
+class Pictures < ApplicationRecord
+  belongs_to :imageable, polymorphic: true
+end
+
+class User < ApplicationRecord
+  has_many :pictures
+end
+
+class Product < ApplicationRecord
+  has_many :pictures
 end
 ```
