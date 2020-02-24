@@ -1,14 +1,37 @@
-$soft-purple: #91B3FF;
-$gray-blue:   #84BDE8;
-$baby-blue:   #9EEFFF;
-$mint:        #84E8DE;
-$seafoam:     #91FFD5;
-$main-gray:   #E7EFFF;
-$deep-gray:   #C8DBE8;
+/* 
+@theme totez
+@author reecebisel
+*/
 
-$background: $main-gray;
+$purple:      #3D5191;
+$gray-blue:   #385E85;
+$baby-blue:   #3E7585;
+$mint:        #285E5C;
+$seafoam:     #3D9176;
+$main-gray:   #A9C5DB;
+$deep-gray:   #3D474F;
+
+$background:      $main-gray;
+$color-light:     $main-gray;
+$color-dark:      $purple;
+$color-primary:   $gray-blue;
+$color-secondary: $seafoam;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Subrayada|Ubuntu+Condensed&display=swap');
+@import './simple';
+
+$heading-font: 'Montserrat Subrayada';
+$main-font:    'Ubuntu Condensed';
 
 section {
-  background-color: $background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $main-font;
+  flex-direction: column;
+
+  h1 {
+    font-family: $heading-font;
+  }
 }
 

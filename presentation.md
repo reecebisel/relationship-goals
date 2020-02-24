@@ -44,7 +44,7 @@ class Books < ApplicationRecord
 end
 ```
 
---
+---
 
 # has_one
 
@@ -57,7 +57,8 @@ class Pokemon < ApplicationRecord
   belongs_to :trainer, as: :favorite
 end
 ```
---
+
+---
 # has_one through
 
 ```ruby
@@ -81,6 +82,12 @@ end
 # Many to Many
 
 ---
+<style scoped>
+  code {
+    font-size: 0.5em;
+  }
+</style>
+
 # has_many through
 Join table has other attributes from foreign keys
 
@@ -102,7 +109,7 @@ end
 ```
 
 ---
-# has_many_and_belongs_to
+## has_many_and_belongs_to
 
 Requires only join table w/o extra attributes
 
@@ -147,7 +154,14 @@ end
 ```
 
 ---
-# Bi-Directional Relationships
+<style scoped>
+  code {
+    font-size: 0.5em;
+  }
+</style>
+
+# Bi-Directional 
+# Relationships
 
 ```ruby
 # Without
